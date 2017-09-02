@@ -1,4 +1,4 @@
-#react-family
+# react-family
 
 [框架搭建教程地址](https://github.com/brickspert/blog/issues/1)（教程会不断更新）
 
