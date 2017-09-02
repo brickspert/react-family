@@ -1,6 +1,6 @@
 # react-family
 
-[框架搭建教程地址](https://github.com/brickspert/blog/issues/1)（教程会不断更新）
+[从零搭建React全家桶框架教程](https://github.com/brickspert/blog/issues/1)（教程会不断更新）
 
 希望您能和我一起完善这个框架！
 
