@@ -6,14 +6,12 @@ import store from './redux/store';
 
 import App from 'components/App/App';
 
-/*初始化*/
 renderWithHotReload(App);
 
-/*热更新*/
 if (module.hot) {
-    module.hot.accept('./router/router', () => {
-        const App = require('components/App/App');
-        renderWithHotReload(App);
+    module.hot.accept('components/App/App', () => {
+        const NextApp = require('components/App/App').default;
+        renderWithHotReload(NextApp);
     });
 }
 
