@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
 import {Provider} from 'react-redux';
 import store from './redux/store';
-
+import {BrowserRouter as Router} from 'react-router-dom';
 import App from 'components/App/App';
 
 renderWithHotReload(App);
@@ -19,7 +19,9 @@ function renderWithHotReload(RootElement) {
     ReactDom.render(
         <AppContainer>
             <Provider store={store}>
-                <RootElement/>
+                <Router>
+                    <RootElement/>
+                </Router>
             </Provider>
         </AppContainer>,
         document.getElementById('app')
