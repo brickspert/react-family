@@ -15,3 +15,7 @@
 1. `npm run build`
 
 2. 拷贝dist文件夹至服务器即可
+
+## 修改历史
+
+1. 2017-09-04 [合并提取webpack公共配置](https://github.com/brickspert/blog/issues/1#webpack-common-config)
