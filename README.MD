@@ -19,3 +19,4 @@
 ## 修改历史
 
 1. 2017-09-04 [合并提取webpack公共配置](https://github.com/brickspert/blog/issues/1#webpack-common-config)
+2. 2017-09-04 [优化目录结构并增加404页面](https://github.com/brickspert/blog/issues/1#op-dir-404)
