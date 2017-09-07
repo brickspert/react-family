@@ -2,8 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 commonConfig = {
     entry: {
         app: [
@@ -22,12 +20,6 @@ commonConfig = {
             test: /\.js$/,
             use: ['babel-loader?cacheDirectory=true'],
             include: path.join(__dirname, 'src')
-        }, {
-            test: /\.css$/,
-            use: ExtractTextPlugin.extract({
-                fallback: "style-loader",
-                use: "css-loader"
-            })
         }, {
             test: /\.(png|jpg|gif)$/,
             use: [{
@@ -49,10 +41,6 @@ commonConfig = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'runtime'
-        }),
-        new ExtractTextPlugin({
-            filename: '[name].[contenthash:5].css',
-            allChunks: true
         })
     ],
 

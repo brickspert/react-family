@@ -15,6 +15,12 @@ const devConfig = {
         /*这里本来应该是[chunkhash]的，但是由于[chunkhash]和react-hot-loader不兼容。只能妥协*/
         filename: '[name].[hash].js'
     },
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ["style-loader", "css-loader"]
+        }]
+    },
     devServer: {
         contentBase: path.join(__dirname, './dist'),
         historyApiFallback: true,
