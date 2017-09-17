@@ -20,3 +20,5 @@
 
 1. 2017-09-04 [合并提取webpack公共配置](https://github.com/brickspert/blog/issues/1#webpack-common-config)
 2. 2017-09-04 [优化目录结构并增加404页面](https://github.com/brickspert/blog/issues/1#op-dir-404)
+3. 2017-09-17 [加入 babel-plugin-transform-runtime 和 babel-polyfill](https://github.com/brickspert/blog/issues/1#babel-polyfill)
+4. 2017-09-17 [集成PostCSS](https://github.com/brickspert/blog/issues/1#postcss)
