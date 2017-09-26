@@ -7,8 +7,8 @@ let store = createStore(combineReducers, applyMiddleware(promiseMiddleware));
 
 if (module.hot) {
     module.hot.accept("./reducers", () => {
-        const nextReducer = require("./reducers").default;
-        store.replaceReducer(nextReducer);
+        const nextCombineReducers = require("./reducers").default;
+        store.replaceReducer(nextCombineReducers);
     });
 }
 
