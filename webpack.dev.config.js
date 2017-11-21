@@ -23,11 +23,9 @@ const devConfig = {
             use: ["style-loader", "css-loader", "postcss-loader"]
         }]
     },
-    plugins:[
+    plugins: [
         new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"mock"'
-            }
+            MOCK: true
         })
     ],
     devServer: {
