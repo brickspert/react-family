@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const path = require('path');
+const webpack = require('webpack');
 
 const commonConfig = require('./webpack.common.config.js');
 
@@ -22,6 +23,13 @@ const devConfig = {
             use: ["style-loader", "css-loader", "postcss-loader"]
         }]
     },
+    plugins:[
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"mock"'
+            }
+        })
+    ],
     devServer: {
         contentBase: path.join(__dirname, './dist'),
         historyApiFallback: true,
