@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-build": "webpack --config webpack.dev.config.js",
     "start": "webpack-dev-server --config webpack.dev.config.js --color --progress --hot",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "mock": "json-server mock/mock.js --watch --port 8090",
+    "mockdev": "npm run mock & npm start"
   },
   "keywords": [
     "react",
@@ -33,6 +35,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
+    "json-server": "^0.12.1",
     "mockjs": "^1.0.1-beta3",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
