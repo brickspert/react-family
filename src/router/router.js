@@ -11,10 +11,10 @@ import Counter from 'bundle-loader?lazy&name=counter!pages/Counter/Counter';
 import UserInfo from 'bundle-loader?lazy&name=userInfo!pages/UserInfo/UserInfo';
 import NotFound from 'bundle-loader?lazy&name=notFound!pages/NotFound/NotFound';
 
-const createComponent = (component) => () => (
+const createComponent = (component) => (props) => (
     <Bundle load={component}>
         {
-            (Component) => Component ? <Component/> : <Loading/>
+            (Component) => Component ? <Component {...props} /> : <Loading/>
         }
     </Bundle>
 );
