@@ -7,7 +7,7 @@
 ## 开发坏境启动
 
 1. `npm install`
-2. `npm start`
+2. `npm run mockdev`
 3. 浏览器打开[http://localhost:8080](http://localhost:8080)
 
 ## 生产坏境部署
