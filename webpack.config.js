@@ -1,13 +1,12 @@
 const merge = require('webpack-merge');
-
 const webpack = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const commonConfig = require('./webpack.common.config.js');
 
 const publicConfig = {
+    mode: 'production',
     devtool: 'cheap-module-source-map',
     module: {
         rules: [{
@@ -20,14 +19,9 @@ const publicConfig = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist/*.*']),
-        new UglifyJSPlugin(),
-        new webpack.DefinePlugin({
-            'process.env': {
-                'NODE_ENV': JSON.stringify('production')
-            }
-        }),
+        new webpack.HashedModuleIdsPlugin(),
         new ExtractTextPlugin({
-            filename: '[name].[contenthash:5].css',
+            filename: '[name].[chunkhash].css',
             allChunks: true
         })
     ]
