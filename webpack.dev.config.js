@@ -1,10 +1,11 @@
+
 const merge = require('webpack-merge');
 const path = require('path');
-const webpack = require('webpack');
 
 const commonConfig = require('./webpack.common.config.js');
 
 const devConfig = {
+    mode: 'development',
     devtool: 'inline-source-map',
     entry: {
         app: [
@@ -24,7 +25,7 @@ const devConfig = {
         }]
     },
     devServer: {
-        port: 8080,
+        port: 8081,
         contentBase: path.join(__dirname, './dist'),
         historyApiFallback: true,
         host: '0.0.0.0',
