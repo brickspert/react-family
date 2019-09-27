@@ -9,7 +9,8 @@
     "start": "webpack-dev-server --config webpack.dev.config.js --color --progress --hot",
     "build": "webpack --config webpack.config.js",
     "mock": "json-server mock/mock.js --watch --port 8090",
-    "mockdev": "npm run mock & npm start"
+    "mockdev": "npm run mock & npm start",
+    "postinstall": "opencollective-postinstall || true"
   },
   "keywords": [
     "react",
@@ -49,11 +50,16 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "opencollective-postinstall": "^2.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/react-family"
   }
 }
